@@ -65,27 +65,28 @@ if (!is_null($events['events'])) {
 			}
 			else if (strpos($text, 'หิว') !== false) {
 				$textout = "ต่ายย่างไหม";
+				$textout2 = "อิอิ"
 			}
 			
 			
 			
 			$messages = [
-				{
+				[
 				 'type' => 'text',
 				 'text' => $textout
-				 },
-				{
+				 ],
+				[
 				 'type' => 'text',
 				 'text' => $textout
-				 },
-				 {
+				 ],
+				 [
 				 'type' => 'text',
 				 'text' => $textout
-				 },
-				{
+				 ],
+				[
 				 'type' => 'text',
 				 'text' => $textout2
-				 }
+				 ]
 			];
 			
 			
