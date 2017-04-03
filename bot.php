@@ -50,7 +50,7 @@ if (!is_null($events['events'])) {
 			$replyToken = $event['replyToken'];
 			
 			// Build message to reply back
-			$textout="";
+			//$textout="";
 			$textout2="";
 			
 			if (strncmp($text, "เมี๊ยว", 6) === 0 or strncmp($text, "เหมียว", 6) === 0 or strncmp($text, "เมี้ยว", 6) === 0){$textout = "ร้องเรียกเมี๊ยวๆ เดี๋ยวก็มา";}
@@ -73,16 +73,15 @@ if (!is_null($events['events'])) {
 			
 			
 			if ($textout2!==""){
-				$messages = [{
-						'type' => 'text',
-						'text' => $textout
+				$messages = [
+					{
+						"type":"text",
+						"text":$textout
 					},
 					{
-						'type' => 'text',
-						'text' => $textout2
-					},
-					
-				];
+						"type":"text",
+						"text":$textout2
+					}
 			}
 			else{
 				$messages = [
