@@ -21,7 +21,7 @@ if (!is_null($events['events'])) {
 			else if (strncmp($text, "ขอหวย", 5) === 0){
 				//$textout =  rand(100000,999999)  ;	
 				$textout = "เลขนำโชคของคุณคือ ";
-				for ($i = 0; $i<7; $i++) 
+				for ($i = 0; $i<6; $i++) 
 				{
 					$textout .= mt_rand(0,9);
 				}
