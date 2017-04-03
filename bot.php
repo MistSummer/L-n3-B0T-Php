@@ -100,7 +100,7 @@ if (!is_null($events['events'])) {
 			
 			
 			//run
-			$result = sendertoapi($messages,$access_token,$replyToken);
+			sendertoapi($messages,$access_token,$replyToken);
 			
 			
 			function sendertoapi($messages,$access_token,$replyToken){
@@ -121,6 +121,8 @@ if (!is_null($events['events'])) {
 			$result = curl_exec($ch);
 			curl_close($ch);
 			echo $result . "\r\n";
+			
+			
 			}
 		}
 	}
