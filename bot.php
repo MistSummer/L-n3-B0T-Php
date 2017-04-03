@@ -75,12 +75,12 @@ if (!is_null($events['events'])) {
 			if ($textout2!==""){
 				$messages = [
 					{
-						"type":"text",
-						"text":$textout
+						'type' => 'text',
+						'text' => $textout
 					},
 					{
-						"type":"text",
-						"text":$textout2
+						'type' => 'text',
+						'text' => $textout2
 					}
 					];
 			}
