@@ -20,7 +20,7 @@ if (!is_null($events['events'])) {
 			if (strncmp($text, "เมี๊ยว", 6) === 0){$textout = "ร้องเรียกเมี๊ยวๆ เดี๋ยวก็มา";}
 			else if (strncmp($text, "ขอหวย", 5) === 0){
 				//$textout =  rand(100000,999999)  ;	
-				$textout = '';
+				$textout = "เลขนำโชคของคุณคือ ";
 				for ($i = 0; $i<7; $i++) 
 				{
 					$textout .= mt_rand(0,9);
