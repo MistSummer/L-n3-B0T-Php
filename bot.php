@@ -72,23 +72,24 @@ if (!is_null($events['events'])) {
 			
 			
 			
-			if ($textout2!=="")
-			$messages = [{
-					'type' => 'text',
-					'text' => $textout
-				},
-				{
-					'type' => 'text',
-					'text' => $textout2
-				},
-				
-			];
-			else
-			$messages = [
-					'type' => 'text',
-					'text' => $textout
+			if ($textout2!==""){
+				$messages = [{
+						'type' => 'text',
+						'text' => $textout
+					},
+					{
+						'type' => 'text',
+						'text' => $textout2
+					},
+					
 				];
-			
+			}
+			else{
+				$messages = [
+						'type' => 'text',
+						'text' => $textout
+					];
+			}
 			
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
