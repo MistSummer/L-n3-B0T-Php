@@ -50,7 +50,7 @@ if (!is_null($events['events'])) {
 			$replyToken = $event['replyToken'];
 			
 			// Build message to reply back
-						
+			$textout2="";			
 			if (strncmp($text, "เมี๊ยว", 6) === 0 or strncmp($text, "เหมียว", 6) === 0 or strncmp($text, "เมี้ยว", 6) === 0){$textout = "ร้องเรียกเมี๊ยวๆ เดี๋ยวก็มา";}
 			else if (strncmp($text, "ขอหวย", 5) === 0){
 				//$textout =  rand(100000,999999)  ;
@@ -88,7 +88,7 @@ if (!is_null($events['events'])) {
 					'replyToken' => $replyToken,
 					'messages' => [$messages,$messages2],
 				];
-			}else{
+			} else {
 				$data = [
 					'replyToken' => $replyToken,
 					'messages' => [$messages],
