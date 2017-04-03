@@ -82,6 +82,7 @@ if (!is_null($events['events'])) {
 						"type":"text",
 						"text":$textout2
 					}
+					];
 			}
 			else{
 				$messages = [
