@@ -24,7 +24,7 @@ function thai_date($time){
     $thai_date_return.= "ที่ ".date("j",$time);
     $thai_date_return.=" เดือน".$thai_month_arr[date("n",$time)];
     $thai_date_return.= " พ.ศ.".(date("Yํ",$time)+543);
-    //$thai_date_return.= "  ".date("H:i",$time)." น.";
+    $thai_date_return.= "  ".date("H:i",$time)." น.";
     return $thai_date_return;
 }
 
@@ -51,7 +51,7 @@ if (!is_null($events['events'])) {
 			
 			// Build message to reply back
 						
-			if (strncmp($text, "เมี๊ยว", 6) === 0){$textout = "ร้องเรียกเมี๊ยวๆ เดี๋ยวก็มา";}
+			if (strncmp($text, "เมี๊ยว", 6) === 0 or strncmp($text, "เหมียว", 6) === 0 or strncmp($text, "เมี้ยว", 6) === 0){$textout = "ร้องเรียกเมี๊ยวๆ เดี๋ยวก็มา";}
 			else if (strncmp($text, "ขอหวย", 5) === 0){
 				//$textout =  rand(100000,999999)  ;
 				$eng_date=time();
