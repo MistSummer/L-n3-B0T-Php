@@ -14,31 +14,18 @@ if (!is_null($events['events'])) {
 			$text = $event['message']['text'];
 			// Get replyToken
 			$replyToken = $event['replyToken'];
+			
 			// Build message to reply back
-			// $messages = [
-				// 'type' => 'text',
-				// 'text' => $text
-			// ];
-			
-			
-			// switch( $text ) {
-			
-				// case ""
-			
-			
-					// $messages = [
-						// 'type' => 'text',
-						// 'text' => $text
-					// ];
-			
-			// }
-			
-			if (strncmp($text, "เมี๊ยว", 6) === 0){
-				// $messages = [
-						// 'type' => 'text',
-						// 'text' => $text
-					// ];
-				$textout = "ร้องเรียกเมี๊ยวๆ เดี๋ยวก็มา";
+						
+			if (strncmp($text, "เมี๊ยว", 6) === 0){$textout = "ร้องเรียกเมี๊ยวๆ เดี๋ยวก็มา";}
+			else if (strncmp($text, "ขอหวย", 5) === 0){
+				//$textout =  rand(100000,999999)  ;	
+				$textout = '';
+				for ($i = 0; $i<7; $i++) 
+				{
+					$textout .= mt_rand(0,9);
+				}
+				
 			}
 			
 			
