@@ -24,7 +24,7 @@ function thai_date($time){
     $thai_date_return.= "ที่ ".date("j",$time);
     $thai_date_return.=" เดือน".$thai_month_arr[date("n",$time)];
     $thai_date_return.= " พ.ศ.".(date("Yํ",$time)+543);
-    $thai_date_return.= "  ".date("H:i",$time)." น.";
+    //$thai_date_return.= "  ".date("H:i",$time)." น.";
     return $thai_date_return;
 }
 
