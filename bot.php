@@ -50,7 +50,9 @@ if (!is_null($events['events'])) {
 			$replyToken = $event['replyToken'];
 			
 			// Build message to reply back
-						
+			$textout="";
+			$textout2="";
+			
 			if (strncmp($text, "เมี๊ยว", 6) === 0 or strncmp($text, "เหมียว", 6) === 0 or strncmp($text, "เมี้ยว", 6) === 0){$textout = "ร้องเรียกเมี๊ยวๆ เดี๋ยวก็มา";}
 			else if (strncmp($text, "ขอหวย", 5) === 0){
 				//$textout =  rand(100000,999999)  ;
@@ -63,14 +65,29 @@ if (!is_null($events['events'])) {
 				}
 				
 			}
+			else if (strpos($text, 'หิว') !== false) {
+				$textout = "ต่ายย่างไหม";
+				$textout2 = "อร่อยน้า อิอิ"
+			}
 			
 			
+			
+			if ($textout2!=="")
+			$messages = [{
+					'type' => 'text',
+					'text' => $textout
+				},
+				{
+					'type' => 'text',
+					'text' => $textout2
+				},
+				
+			];
+			else
 			$messages = [
 					'type' => 'text',
 					'text' => $textout
 				];
-			
-			
 			
 			
 			// Make a POST Request to Messaging API to reply to sender
