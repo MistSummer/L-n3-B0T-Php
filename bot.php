@@ -100,10 +100,10 @@ if (!is_null($events['events'])) {
 			
 			
 			//run
-			$result = sendertoapi($messages,$access_token);
+			$result = sendertoapi($messages,$access_token,$replyToken);
 			
 			
-			function sendertoapi($messages,$access_token){
+			function sendertoapi($messages,$access_token,$replyToken){
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			$data = [
