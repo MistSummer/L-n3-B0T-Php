@@ -75,11 +75,12 @@ if (!is_null($events['events'])) {
 					'text' => $textout
 				];
 			
-			$messages2 = [
-					'type' => 'text',
-					'text' => $textout2
-				];
-			
+			if($messages2!==""){
+				$messages2 = [
+						'type' => 'text',
+						'text' => $textout2
+					];
+			}
 			
 			
 			// Make a POST Request to Messaging API to reply to sender
