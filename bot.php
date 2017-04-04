@@ -62,7 +62,7 @@ if (!is_null($events['events'])) {
 			}
 			
 			else if (strncmp($text, "เมี๊ยว", 6) === 0 or strncmp($text, "เหมียว", 6) === 0 or strncmp($text, "เมี้ยว", 6) === 0){$textout = "ร้องเรียกเมี๊ยวๆ เดี๋ยวก็มา";}
-			else if (strncmp($text, "ขอหวย", 5) = 0){
+			else if (strncmp($text, "ขอหวย", 5) == 0){
 				//$textout =  rand(100000,999999)  ;
 				$eng_date=time();
 				$thaidate = thai_date($eng_date);
@@ -75,7 +75,7 @@ if (!is_null($events['events'])) {
 			}
 			
 			
-			else if (strncmp($text, "ขอราคาน้ำมัน") !== false) {
+			else if (strncmp($text, "ขอราคาน้ำมัน", 12) == 0)) {
 				
 				// สร้าง object 
 				$client = new SoapClient("http://www.pttplc.com/webservice/pttinfo.asmx?WSDL", // URL ของ webservice
