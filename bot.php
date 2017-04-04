@@ -31,8 +31,12 @@ function thai_date($time){
     return $thai_date_return;
 }
 
-
-
+//check startwith string
+function strncmp_startswith2($haystack, $needle) {
+    return $haystack[0] === $needle[0]
+        ? strncmp($haystack, $needle, strlen($needle)) === 0
+        : false;
+}
 
 
 //::: LINE SECTION :::
@@ -62,7 +66,7 @@ if (!is_null($events['events'])) {
 			}
 			
 			else if (strncmp($text, "เมี๊ยว", 6) === 0 or strncmp($text, "เหมียว", 6) === 0 or strncmp($text, "เมี้ยว", 6) === 0){$textout = "ร้องเรียกเมี๊ยวๆ เดี๋ยวก็มา";}
-			else if (strncmp($text, "ขอหวย") == 0){
+			else if (strncmp_startswith2($text, "ขอหวย") == 1){
 				//$textout =  rand(100000,999999)  ;
 				$eng_date=time();
 				$thaidate = thai_date($eng_date);
