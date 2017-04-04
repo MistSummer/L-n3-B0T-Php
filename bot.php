@@ -126,7 +126,7 @@ if (!is_null($events['events'])) {
 								// }
 								
 								if($val->PRODUCT == 'NGV'){
-							   $textout .= $val->PRODUCT .'  '.$val->PRICE." บาท"."\n";
+							   $textout = $val->PRODUCT .'  '.$val->PRICE." บาท"."\n";
 								 }
 
 							}
