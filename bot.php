@@ -65,7 +65,7 @@ if (!is_null($events['events'])) {
 				$textout2 = "อร่อยน้า อิอิ";
 			}
 			
-			else if (strncmp($text, "เมี๊ยว", 6) === 0 or strncmp($text, "เหมียว", 6) === 0 or strncmp($text, "เมี้ยว", 6) === 0){$textout = "ร้องเรียกเมี๊ยวๆ เดี๋ยวก็มา";}
+			else if (strncmp_startswith2($text, "เมี๊ยว") == 1 or strncmp_startswith2($text, "เหมียว") == 1 or strncmp_startswith2($text, "เมี้ยว") == 1){$textout = "ร้องเรียกเมี๊ยวๆ เดี๋ยวก็มา";}
 			else if (strncmp_startswith2($text, "ขอหวย") == 1){
 				//$textout =  rand(100000,999999)  ;
 				$eng_date=time();
