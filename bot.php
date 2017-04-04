@@ -1,6 +1,9 @@
 <?php
 
+
 //Function
+//set default Bangkok Timezone
+date_default_timezone_set("Asia/Bangkok");
 
 $thai_day_arr=array("อาทิตย์","จันทร์","อังคาร","พุธ","พฤหัสบดี","ศุกร์","เสาร์");
 $thai_month_arr=array(
