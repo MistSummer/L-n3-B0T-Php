@@ -75,7 +75,7 @@ if (!is_null($events['events'])) {
 			}
 			
 			
-			if (strncmp($text, "ขอราคาน้ำมัน") !== false) {
+			else if (strncmp($text, "ขอราคาน้ำมัน") !== false) {
 				
 				// สร้าง object 
 				$client = new SoapClient("http://www.pttplc.com/webservice/pttinfo.asmx?WSDL", // URL ของ webservice
