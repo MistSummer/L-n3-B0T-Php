@@ -108,7 +108,7 @@ if (!is_null($events['events'])) {
 				//echo($ob. "\n". "ENDDDDD1");
 
 				//echo("ENDDDDD2". "\n");
-							  
+							  $textout = $ob;
 							  
 							 // เนื่องจากข้อมูลที่ได้เป็น string(ในรูปแบบ xml) จึงต้องแปลงเป็น object ให้ง่ายต่อการเข้าถึง
 							  $xml = new SimpleXMLElement($ob);
@@ -126,7 +126,7 @@ if (!is_null($events['events'])) {
 								// }
 								
 								if($val->PRODUCT == 'NGV'){
-							   $textout = $val->PRODUCT .'  '.$val->PRICE." บาท"."\n";
+							   $textout3 = $val->PRODUCT .'  '.$val->PRICE." บาท"."\n";
 								 }
 
 							}
