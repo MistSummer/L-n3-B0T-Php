@@ -58,6 +58,7 @@ if (!is_null($events['events'])) {
 			
 			// Build message to reply back
 			//$textout="";
+			$textout="";
 			$textout2="";
 			
 			if (strpos($text, "หิว") !== false) {
@@ -121,7 +122,7 @@ if (!is_null($events['events'])) {
 							
 							  // ถ้าไม่มีราคาก็ไม่ต้องแสดงผล เนื่องจากมีบางรายการไม่มีราคา   
 							  if($val->PRICE != ''){
-							  $textout .= $val->PRODUCT .'  '.$val->PRICE.' บาท'."\n";
+							  $textout .= $val->PRODUCT .'  '.$val->PRICE." บาท"."\n";
 								}
 
 							}
