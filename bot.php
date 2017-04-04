@@ -121,9 +121,13 @@ if (!is_null($events['events'])) {
 							foreach ($xml  as  $key =>$val) {  
 							
 							  // ถ้าไม่มีราคาก็ไม่ต้องแสดงผล เนื่องจากมีบางรายการไม่มีราคา   
-							  if($val->PRICE != ''){
-							  $textout .= $val->PRODUCT .'  '.$val->PRICE." บาท"."\n";
-								}
+							  // if($val->PRICE != ''){
+							  // $textout .= $val->PRODUCT .'  '.$val->PRICE." บาท"."\n";
+								// }
+								
+								if($val->PRODUCT == 'NGV'){
+							   $textout .= $val->PRODUCT .'  '.$val->PRICE." บาท"."\n";
+								 }
 
 							}
 				
