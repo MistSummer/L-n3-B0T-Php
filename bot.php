@@ -121,7 +121,7 @@ if (!is_null($events['events'])) {
 							  $textout .= $val->PRODUCT .'  '.$val->PRICE.' บาท'."\n";
 								}
 
-				
+							}
 				
 				
 				
