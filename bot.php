@@ -75,6 +75,23 @@ if (!is_null($events['events'])) {
 			}
 			
 			
+			if (strncmp($text, "ขอราคาน้ำมัน") !== false) {
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				$textout = "เติมฟรีไหม?". "\n". "ไม่อาว" ;
+				
+			}
+			
+			
 			$messages = [
 						'type' => 'text',
 						'text' => $textout
